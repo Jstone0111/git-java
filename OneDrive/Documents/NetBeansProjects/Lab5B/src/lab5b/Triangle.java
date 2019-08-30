@@ -1,0 +1,50 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package lab5b;
+
+/**
+ *
+ * @author Jacob
+ */
+public class Triangle {
+    public float base;
+    public float height;
+    Point center;
+    
+    public Triangle(float b, float h, int x, int y){
+        this.base = b;
+        this.height = h;
+        this.center = new Point (x,y);
+    }
+    
+    
+    public float getBase(){
+        return base;
+    }
+    public void setBase(float b){
+        this.base = b;    
+    }
+    public float getHeight(){
+        return height;
+    }
+    public void setHeight(float h){
+        this.height = h;    
+    }
+    public float getArea(){
+        float area = 0;
+        area = (float) (.5 *(base * height));
+        
+        return area;
+    }
+    public String toString(){
+        return (center.toString() + "/ " + Float.toString(getArea()) + " \\     ");
+    }
+    
+    public Point getPoint(){
+        return center;
+}
+    
+}
